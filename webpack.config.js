@@ -1,18 +1,15 @@
 var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin")
 
 module.exports = {
-    entry: {
-      main: './src/main.js',
-      main1: './src/main1.js',
-    },
+    entry: './reference/main.js',
     devtool: 'eval-source-map',
     output: {
-        path: __dirname + '/dist',
+        path: __dirname + '/dist1',
         filename: '[name].js'
-    },
-    plugins: [
-        new CommonsChunkPlugin({
-        name: "common"
-        })
-    ]
+    }
+    // plugins: [
+    //     new CommonsChunkPlugin({
+    //     name: "common"
+    //     })
+    // ]
 };
